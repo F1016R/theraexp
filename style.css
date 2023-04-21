@@ -1,0 +1,52 @@
+/* CSS pour le header */
+header {
+    background-color: #D2B48C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header img {
+    max-width: 100%;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* CSS pour les sections */
+  section {
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  section:nth-child(even) {
+    background-color: #F5DEB3;
+  }
+  
+  /* CSS pour le footer */
+  footer {
+    background-color: #D2B48C;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
