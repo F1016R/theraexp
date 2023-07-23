@@ -1,52 +1,468 @@
 /* CSS pour le header */
-header {
-    background-color: #D2B48C;
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body{
+  font-family: 'Muli', sans-serif;
+  --color1: rgb(95, 25, 112);
+  --color2: rgb(86, 172, 223);
+}
+
+
+
+  header {
+    background-color: white;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
-  
-  header img {
-    max-width: 100%;
-  }
-  
+
+
+
   nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    margin: 10px;
   }
-  
+
   nav li {
-    margin: 0 10px;
+    margin: 0 30px;
   }
-  
+
   nav a {
-    color: #fff;
+    color: var(--color1);
+    font-size: large;
+    font-weight: bold;
     text-decoration: none;
+    padding: 10px;
   }
-  
-  /* CSS pour les sections */
-  section {
-    padding: 100px 0;
-    text-align: center;
+
+  nav li a:hover {
+    text-decoration: overline;
+    color: var(--color2);
   }
-  
-  section:nth-child(even) {
-    background-color: #F5DEB3;
-  }
-  
-  /* CSS pour le footer */
-  footer {
-    background-color: #D2B48C;
-    padding: 20px;
-    text-align: center;
+
+  #hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
     color: #fff;
+    font-size: 20px;
+    cursor: pointer;
   }
+
+  @media only screen and (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--color2);
+      padding: 10px;
+      margin: 0;
+      z-index: 1;
+    }
+
+    nav li {
+      margin: 10px 0;
+      flex-basis: auto;
+    }
+
+    nav a {
+      font-size: small;
+      padding: 5px;
+    }
+
+    #hamburger {
+      display: block;
+    }
+  }
+  /* CSS pour les sections */
+
+/* Styles pour la section Services*/
+
+#services {
+  color: var(--color1);
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  margin-top: 100px;
+  background-image: url(/img/ocean.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.box {
+  border-radius: 5px;
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  margin: 0 20px;
+  background-color: rgba(255, 255, 255, 1);
+  text-align: left;
+  overflow: hidden;
+}
+
+.box1 {
+  color: var(--color2);
+  background-color: rgba(252, 235, 248, 0.9);
+}
+
+.box2 {
+  background-color: rgba(225, 249, 255, 0.9);
+}
+
+.box:hover {
+  transform: scale(1.4);
+  overflow: hidden;
+}
+
+.banner {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.boite {
+  color: var(--color1);
+  width: 25%;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.boite1 {
+  background-image: url(/img/dep1.png)
+}
+
+.boite2 {
+  background-image: url(/img/dispute1.png);
+}
+
+.boite3 {
+  background-image: url(/img/talking1.png);
+}
+
+.boite h2 {
+  text-align: left;
+  margin-top: 0;
+}
+
+.boite p {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: auto;
+    padding: 30px 20px;
+    display: block;
+  }
+  
+  .box {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .banner {
+    flex-wrap: wrap;
+  }
+  
+  .boite {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+
+
+/* Style de la section des Forfaits */
+
+#forfaits {
+  color: var(--color1);
+  text-align: center;
+  background-color: #fff;
+  background-size: cover;
+  padding: 50px 0;      
+}
+    
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 60px;
+}
+    
+
+.grid-item {
+  text-align: left;
+  padding: 50px;
+}
+
+@media screen and (max-width: 768px) {
+.grid-container {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+}
+    
+.grid-item {
+  padding: 30px;
+}
+}
+    
+
+/* Styles pour la section Info*/
+section#info {
+  background-color: var(--color2);
+  padding: 50px 10px;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-content img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.text-content {
+  color: var(--color1);
+  text-align: center;
+  margin-top: 30px;
+}
+
+.text-content h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.text-content ul {
+  list-style: disc;
+  margin: 20px 0 0 20px;
+  padding: 0;
+}
+
+.text-content ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .info-content {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .info-content img {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .text-content {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+  /* Style de la section des Contact */
+
+/* Contact Section */
+
+#contact-section {
+  color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 250, 243);
+  padding: 50px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+
+
+.contact-info {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact-info h2 {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #c0c0c0;
+}
+
+.map {
+  max-width: 600px;
+  width: 100%;
+  height: 450px;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact-container > div {
+    flex-basis: 50%;
+  }
+
+  .contact-info {
+    margin-bottom: 0;
+  }
+
+  .map {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-container > div {
+    flex-basis: 100%;
+  }
+
+  .map {
+    margin-top: 50px;
+  }
+}
+
+/* Style pour le footer */
+
+.footer {
+  background: var(--color2);
+  padding: 30px 0px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: medium;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+  margin: 0px 20px;
+}
+
+.footer .row a:hover {
+  color: var(--color1);
+}
+
+.footer .row ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer .row ul li {
+  margin: 10px;
+  list-style: none;
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+@media (max-width: 768px) {
+  .footer .row {
+    flex-direction: column;
+  }
+  .footer .row ul {
+    margin-top: 20px;
+  }
+  .footer .row ul li {
+    margin: 0px;
+  }
+}
+  
   
