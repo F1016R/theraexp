@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/img/logoartse.png" type="">
+  <title>ARTS•E</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="node.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+
+  <header>
+    <div class="menu-toggle">&#9776;</div>
+    <nav class="menu">
+      <a href="#top"><img src="/img/paysagement.png" alt="" width="240px" height="120px"></a>
+      <div class="menu-links">
+        <a href="#top">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact-wrapper">Contact</a>
+      </div>
+    </nav>
+  </header>
+  
+  <section id="a-propos" class="section section-apropos">
+    <div class="overlay">
+      <img src="/img/gazon-min.jpg" alt="Image à propos">
+      <div class="overlay-text">
+        <h2>ARTS•E</h2>
+        <p>Notre entreprise de paysagement sur la rive nord de Montréal offre une gamme complète de services pour améliorer l'apparence de votre espace extérieur. Nous proposons notamment des services d'aménagement paysager, de création de jardins et de lavage à pression.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Section services -->
+  <section id="services" class="section section-services">
+    <div class="container">
+      <h2>Nos services</h2>
+      <div class="services-grid">
+        <div class="service">
+          <img src="/img/machine-min.jpg" alt="Service 2">
+          <h3>Nettoyage à pression</h3>
+          <p>Patio, vinyle, entrée de garage, béton,  asphaltes, contour de piscine hors-terre</p>
+        </div>
+        <div class="service">
+          <img src="/img/tonte-min.jpg" alt="Service 1">
+          <h3>Gazon</h3>
+          <p>Déchaumage du printemps à balai mécanique, tonte de gazon résidentiel. </p>
+        </div>
+        <div class="service">
+          <img src="/img/arbustre-min.jpg" alt="Service 3">
+          <h3>Coupe de haie</h3>
+          <p>Coupe de haie professionnelle. Petites et moyennes tailles.</p>
+        </div>
+        <div class="service">
+          <img src="/img/conseil-min.jpg" alt="">
+          <h3>Conseils</h3>
+          <p>J'offre des conseils et références sur la fertilisation, terrassement, plantation de conifères et végétaux. <br> Pour travaux de pavé ou muret:</p>
+          <a href="http://paysagementjanuario.com/">Paysagement Januario</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <img src="/img/image01.jpg" alt="Image de paysage" class="gallery-img">
+      <img src="/img/image02.jpg" alt="Image de paysage" class="gallery-img">
+      <img src="/img/image03.jpg" alt="Image de paysage" class="gallery-img">
+      <img src="/img/image04.jpg" alt="Image de paysage" class="gallery-img">
+    </div>
+  </section>
+  
+
+  <div id="contact-wrapper">
+    <div class="map-wrapper">
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d357280.1227187574!2d-73.98969061369291!3d45.60560054676622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc92107b4dfda6b%3A0x2eb4b26fe333c419!2sLaval%2C%20QC!5e0!3m2!1sfr!2sca!4v1683157426408!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="info-wrapper">
+        <h2>Coordonnées</h2>
+        <ul>
+          <p>Rive-Nord - Laval - Lanaudière - Laurentide</p>
+          <li><i class="fa fa-phone"></i> (514)726-9978</li>
+          <li><i class="fa fa-envelope"></i>artsenord@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+<!-- Footer -->
+<footer>
+  <div class="footer">
+    <div class="row">
+      <a href="https://www.facebook.com/dong.ding.9235?mibextid=ZbWKwL" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="#top"><img src="/img/Creative.png" alt="" width="100px" height="100px"></a>
+      <a href="mailto:artsenord@gmail.com"><i class="fa fa-envelope"></i></a>
+    </div>
+
+    <div class="row">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Projets</a></li>
+        <li><a href="#contact-wrapper">Contact</a></li>
+      </ul>
+      <p> © 2023 Arts•e Tous droits réservés || Designed By: f1016r </p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  const toggleButton = document.getElementsByClassName('menu-toggle')[0];
+  const menuLinks = document.getElementsByClassName('menu-links')[0];
+  
+  toggleButton.addEventListener('click', () => {
+    menuLinks.classList.toggle('active');
+  });
+</script>
